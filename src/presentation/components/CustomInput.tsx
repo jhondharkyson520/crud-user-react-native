@@ -3,6 +3,8 @@ import styled from 'styled-components/native';
 
 type Props = {
   title: string;
+  value: string;
+  onChange: (text: string) => void;
 };
 
 const Input = styled.TextInput`
@@ -15,21 +17,16 @@ const Input = styled.TextInput`
   margin-bottom: 16px;
 `;
 
-export function CustomInput({title}: Props) {
-  const [inputValue, setInputValue] = useState('');
-
-  const handleTextChange = (text: string) => {
-    setInputValue(text);
-  };
-
+export function CustomInput({title, value, onChange}: Props) {
+ 
   return (
       <Input
-        value={inputValue}
-        onChangeText={handleTextChange}
-        placeholder={title}
-        placeholderTextColor="#ccc"
-        accessibilityLabel={title}
-        accessibilityHint={`Campo para digitar ${title}`}
+      value={value}
+      onChangeText={onChange}
+      placeholder={title}
+      placeholderTextColor="#ccc"
+      accessibilityLabel={title}
+      accessibilityHint={`Campo para digitar ${title}`}
       />
   );
 }

@@ -22,9 +22,9 @@ export function HomeScreen() {
 
   return (
     <Container>
-      <Title screenWidth={width}>Home - E com styled em</Title>
-      <CustomButton title="Ir para User" onPress={() => router.push("/user")} />
-      <CustomButton title="Ir para Login" onPress={() => router.push("/login")} />
+      <Title screenWidth={width}>Home</Title>
+      <CustomButton title="Create User" onPress={() => router.push("/create")} />
+      <CustomButton title="All Users" onPress={() => router.push('/')} />
     </Container>
   );
 }
