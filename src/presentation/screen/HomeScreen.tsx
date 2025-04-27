@@ -1,4 +1,3 @@
-import { View, Text } from "react-native";
 import { useRouter } from "expo-router";
 import { CustomButton } from "../components/CustomButton";
 import styled from "styled-components/native";
@@ -24,7 +23,7 @@ export function HomeScreen() {
     <Container>
       <Title screenWidth={width}>Home</Title>
       <CustomButton title="Create User" onPress={() => router.push("/create")} />
-      <CustomButton title="All Users" onPress={() => router.push('/')} />
+      <CustomButton title="All Users" onPress={() => router.push('/users')} />
     </Container>
   );
 }

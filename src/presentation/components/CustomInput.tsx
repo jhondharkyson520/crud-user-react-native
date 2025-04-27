@@ -17,7 +17,7 @@ const Input = styled.TextInput`
   margin-bottom: 16px;
 `;
 
-export function CustomInput({title, value, onChange}: Props) {
+export function CustomInput({title, value, onChange,...rest}: Props) {
  
   return (
       <Input
@@ -27,6 +27,7 @@ export function CustomInput({title, value, onChange}: Props) {
       placeholderTextColor="#ccc"
       accessibilityLabel={title}
       accessibilityHint={`Campo para digitar ${title}`}
+      {...rest}
       />
   );
 }
